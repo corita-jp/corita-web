@@ -20,6 +20,9 @@
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="canonical" href="https://pictan.corita.jp/ja">
+  <link rel="alternate" hreflang="en" href="https://pictan.corita.jp/">
+  <link rel="alternate" hreflang="ja" href="https://pictan.corita.jp/ja">
+  <link rel="alternate" hreflang="x-default" href="https://pictan.corita.jp/">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,8 +48,15 @@
       <a href="#levels">レベル</a>
       <a href="#faq">よくある質問</a>
     </div>
-    <!-- TODO(app-store-url): Replace href with actual App Store URL after approval. -->
-    <a class="btn btn--primary" href="#cta" data-app-store-link>App Store で始める</a>
+    <div style="display:flex;align-items:center;gap:0">
+      <div class="nav__lang" aria-label="Language">
+        <a href="/" class="nav__lang-btn" data-lang-switch="en" hreflang="en">EN</a>
+        <span class="nav__lang-sep" aria-hidden="true">｜</span>
+        <a href="/ja" class="nav__lang-btn nav__lang-btn--active" data-lang-switch="ja" hreflang="ja" aria-current="page">日本語</a>
+      </div>
+      <!-- TODO(app-store-url): Replace href with actual App Store URL after approval. -->
+      <a class="btn btn--primary" href="#cta" data-app-store-link>App Store で始める</a>
+    </div>
   </div>
 </nav>
 

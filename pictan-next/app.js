@@ -2,6 +2,16 @@
 (function () {
   'use strict';
 
+  /* ---------- Language: manual switch ---------- */
+  // First-visit auto-redirect lives in an inline <head> script on the English
+  // root, so it fires before paint. This handler only records the user's
+  // explicit choice so we never auto-redirect again.
+  document.querySelectorAll('[data-lang-switch]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      try { localStorage.setItem('pictan_lang_pref', btn.getAttribute('data-lang-switch') + '-manual'); } catch (_) {}
+    });
+  });
+
   /* ---------- Demo card (3-phase flashcard) ---------- */
   // phase 0 = guess (definition only, "タップして答え合わせ")
   // phase 1 = revealed (spell + example + audio + 判定ボタン)
