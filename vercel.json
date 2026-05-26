@@ -3,6 +3,13 @@
   "trailingSlash": false,
   "rewrites": [
     {
+      "source": "/",
+      "destination": "/pictan-next/index.html",
+      "has": [
+        { "type": "host", "value": "pictan.corita.jp" }
+      ]
+    },
+    {
       "source": "/:path*",
       "destination": "/pictan-next/:path*",
       "has": [
