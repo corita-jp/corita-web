@@ -12,37 +12,10 @@
     });
   });
 
-  /* ---------- Demo card (3-phase flashcard) ---------- */
-  // phase 0 = guess (definition only, "タップして答え合わせ")
-  // phase 1 = revealed (spell + example + audio + 判定ボタン)
-  // phase 2 = result   ("記録しました。次のカードへ。")
-  const demoCard = document.querySelector('[data-demo-card]');
-  if (demoCard) {
-    const steps = document.querySelectorAll('[data-demo-step]');
-    const image = demoCard.querySelector('.demo-card__image');
-    const guessHint = demoCard.querySelector('.demo-card__bottom--guess');
-    const actionBtns = demoCard.querySelectorAll('.demo-card__btn');
-    const resetBtn = document.querySelector('[data-demo-reset]');
-
-    function setPhase(next) {
-      demoCard.dataset.phase = String(next);
-      steps.forEach((el) => {
-        el.classList.toggle('demo-step--active', Number(el.dataset.demoStep) === next);
-      });
-    }
-
-    function reveal() {
-      if (demoCard.dataset.phase === '0') setPhase(1);
-    }
-    function judge() {
-      if (demoCard.dataset.phase === '1') setPhase(2);
-    }
-
-    image && image.addEventListener('click', reveal);
-    guessHint && guessHint.addEventListener('click', reveal);
-    actionBtns.forEach((btn) => btn.addEventListener('click', judge));
-    resetBtn && resetBtn.addEventListener('click', () => setPhase(0));
-  }
+  /* ---------- Demo: side-by-side phases ---------- */
+  // The demo section is now a static guess→reveal pair of real screenshots,
+  // so there is no JS state to manage. Left in place as an anchor in case
+  // future hover or in-view animations are added.
 
   /* ---------- FAQ accordion ---------- */
   // Single-open behavior matching the React prototype.

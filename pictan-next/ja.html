@@ -92,16 +92,15 @@
               <path d="M5 12h14M13 6l6 6-6 6"/>
             </svg>
           </a>
-          <a class="btn btn--secondary btn--lg" href="#how">使い方を見る</a>
         </div>
-        <p class="hero__cta-note">Lv.1 は無料。ログイン不要、開いてすぐ使えます。</p>
+        <p class="hero__cta-note">ログイン不要、開いてすぐ使えます。</p>
       </div>
       <div class="hero__phone-wrap">
         <div class="hero__dots dot-pattern hero__dots--tr"></div>
         <div class="hero__dots dot-pattern hero__dots--bl"></div>
         <div class="phone phone--lg">
           <div class="phone__screen">
-            <img src="assets/app-card-spill.png" alt="pictan アプリのフラッシュカード画面" width="360" height="660">
+            <img src="assets/demo-reveal-ja.png" alt="pictan の「seal」カード画面。画像、定義、例文、覚えてた／まだ、のボタンが見える。">
           </div>
         </div>
       </div>
@@ -112,7 +111,6 @@
   <section class="section pain">
     <div class="container">
       <div class="section-header">
-        <p class="section-eyebrow">ペイン</p>
         <h2 class="display-lg">なんで、こんなに退屈なんだろう。</h2>
         <p class="section-header__sub">
           英語の勉強がうまくいかないとき、思い当たるのは、だいたいこのあたりです。
@@ -138,7 +136,7 @@
               <path d="M8 12l2 2 4-4"/>
             </svg>
           </div>
-          <div class="pain-card__title">Duolingoを、3週間で開かなくなる。</div>
+          <div class="pain-card__title">英語学習アプリを、3週間で開かなくなる。</div>
           <div class="pain-card__body">通知だけが溜まっていく。</div>
         </div>
 
@@ -171,7 +169,6 @@
   <section class="section" id="why">
     <div class="container">
       <div class="section-header">
-        <p class="section-eyebrow">続かない理由</p>
         <h2 class="display-lg">続かないのは、本人のせいじゃない。<br>学び方の設計が、現実とずれている。</h2>
         <p class="section-header__sub struct__intro">
           これまでの単語学習が続きにくかった理由は、だいたいこの3つに集約できます。pictan はここから組み立て直しました。
@@ -205,7 +202,6 @@
   <section class="section pillars" id="how">
     <div class="container">
       <div class="section-header">
-        <p class="section-eyebrow">pictan のアプローチ</p>
         <h2 class="display-lg">３つの柱が、互いを支えている。</h2>
         <p class="section-header__sub">
           pictan を作っているのは、画像・想起・英英定義の3つ。それぞれが単体で効くというより、組み合わさってはじめてうまく回る設計にしています。
@@ -280,7 +276,7 @@
       <div class="pillars__synergy">
         <div>
           <h3 class="synergy__title">
-            画像付きの単語帳でも、Anki でも、英英辞典でもない。
+            画像付きの単語帳でも、機械的な暗記アプリでも、英英辞典でもない。
           </h3>
           <p class="synergy__lead">
             画像があるから、英語の定義で詰まっても、見れば意味が取れる。<br>
@@ -320,122 +316,48 @@
   <section class="section demo">
     <div class="container">
       <div class="section-header">
-        <p class="section-eyebrow">使い方</p>
         <h2 class="display-lg">１枚のカードで起きていること。</h2>
         <p class="section-header__sub">
-          下のカードをタップして動きを確かめてみてください。1日5〜15分、通勤や休憩のあいだに進められます。
+          まず思い出して、それからタップで答え合わせ。1日5〜15分、通勤や休憩のあいだに進められます。
         </p>
       </div>
 
-      <div class="demo__grid">
-        <div class="demo__copy">
-          <div class="demo__steps">
-            <div class="demo-step demo-step--active" data-demo-step="0">
-              <div class="demo-step__num">1</div>
-              <div>
-                <p class="demo-step__title">まず、思い出してみる</p>
-                <p class="demo-step__body">画像と英語の説明だけが表示されます。単語は隠したまま、自分の頭で先に思い出してみる時間です。</p>
-              </div>
-            </div>
-            <div class="demo-step" data-demo-step="1">
-              <div class="demo-step__num">2</div>
-              <div>
-                <p class="demo-step__title">タップで答え合わせ</p>
-                <p class="demo-step__body">カードをタップすると、スペルと例文が一度に出てきます。発音も聞けます。</p>
-              </div>
-            </div>
-            <div class="demo-step" data-demo-step="2">
-              <div class="demo-step__num">3</div>
-              <div>
-                <p class="demo-step__title">覚えてた／まだ、を選ぶ</p>
-                <p class="demo-step__body">自分で判定するだけ。覚えていない単語ほど、早めにもう一度出てきます。</p>
-              </div>
-            </div>
-          </div>
-          <button class="btn btn--secondary" data-demo-reset style="margin-top:20px">最初から見る</button>
-        </div>
-
-        <div class="demo__phone-wrap">
-          <div class="phone phone--sm" style="aspect-ratio: 260 / 540">
+      <div class="demo__pair">
+        <figure class="demo__phase">
+          <div class="phone phone--sm">
             <div class="phone__screen">
-              <div class="demo-card" data-demo-card data-phase="0">
-                <div class="demo-card__statusbar">
-                  <span>9:03</span>
-                  <span style="display:flex;gap:4px;align-items:center">
-                    <span style="display:inline-block;width:14px;height:6px;background:#141413;border-radius:2px"></span>
-                    <span style="display:inline-block;width:6px;height:10px;background:#141413;border-radius:1px"></span>
-                  </span>
-                </div>
-                <div class="demo-card__topbar">
-                  <div class="demo-card__close" aria-hidden="true">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M6 6l12 12M18 6L6 18"/>
-                    </svg>
-                  </div>
-                  <div class="demo-card__counter">12 / 20</div>
-                  <div style="width:24px"></div>
-                </div>
-                <div class="demo-card__progress">
-                  <div class="demo-card__progress-fill" style="width:60%"></div>
-                </div>
-
-                <div class="demo-card__image" role="button" tabindex="0" aria-label="答え合わせ">
-                  <div class="demo-card__sound" aria-hidden="true">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M11 5L6 9H3v6h3l5 4V5z"/>
-                      <path d="M16 8a5 5 0 010 8M19 5a9 9 0 010 14"/>
-                    </svg>
-                  </div>
-                  <svg viewBox="0 0 200 160" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0" aria-hidden="true">
-                    <defs>
-                      <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
-                        <stop offset="0" stop-color="#5b4636"/>
-                        <stop offset="1" stop-color="#1f1611"/>
-                      </linearGradient>
-                    </defs>
-                    <rect width="200" height="160" fill="url(#bg)"/>
-                    <ellipse cx="100" cy="125" rx="60" ry="10" fill="#3d2a1d" opacity="0.7"/>
-                    <g transform="translate(80 60) rotate(-25)">
-                      <rect width="40" height="34" rx="3" fill="#ece4d8"/>
-                      <path d="M40 8 q14 4 14 13 q0 9 -14 13" fill="none" stroke="#ece4d8" stroke-width="4"/>
-                    </g>
-                    <path d="M110 85 q-2 18 -6 28 q-4 8 -10 12" stroke="#5b3a20" stroke-width="5" fill="none" stroke-linecap="round"/>
-                    <ellipse cx="92" cy="128" rx="22" ry="6" fill="#5b3a20"/>
-                    <ellipse cx="92" cy="127" rx="14" ry="3" fill="#7c4f2c"/>
-                  </svg>
-                  <div class="demo-card__image-tag">spill</div>
-                </div>
-
-                <div class="demo-card__meta">VERB</div>
-                <div class="demo-card__def">To let water or food fall out by mistake.</div>
-
-                <div class="demo-card__example-wrap">
-                  <div class="demo-card__example-label">EXAMPLE</div>
-                  <div class="demo-card__example">Please do not spill your drink on the book.</div>
-                </div>
-
-                <div class="demo-card__reveal-hint demo-card__bottom demo-card__bottom--guess">タップして答え合わせ</div>
-
-                <div class="demo-card__actions demo-card__bottom demo-card__bottom--reveal">
-                  <button class="demo-card__btn demo-card__btn--not" type="button">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M19 12H5M11 6l-6 6 6 6"/>
-                    </svg>
-                    まだ
-                  </button>
-                  <button class="demo-card__btn demo-card__btn--got" type="button">
-                    覚えた
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M5 12h14M13 6l6 6-6 6"/>
-                    </svg>
-                  </button>
-                </div>
-
-                <div class="demo-card__reveal-hint demo-card__bottom demo-card__bottom--result">記録しました。次のカードへ。</div>
-              </div>
+              <img src="assets/demo-guess-ja.png" alt="画像と説明だけが見える、答え合わせ前のカード画面">
             </div>
           </div>
+          <figcaption class="demo__phase-caption">
+            <span class="demo__phase-num">1</span>
+            <div>
+              <p class="demo__phase-title">まず、思い出してみる</p>
+              <p class="demo__phase-body">画像と英語の説明だけが表示されます。単語は隠したまま、自分の頭で先に思い出してみる時間です。</p>
+            </div>
+          </figcaption>
+        </figure>
+
+        <div class="demo__arrow" aria-hidden="true">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M13 6l6 6-6 6"/>
+          </svg>
         </div>
+
+        <figure class="demo__phase">
+          <div class="phone phone--sm">
+            <div class="phone__screen">
+              <img src="assets/demo-reveal-ja.png" alt="タップ後の画面。スペルと例文が表示され、覚えてた／まだ、を選べる">
+            </div>
+          </div>
+          <figcaption class="demo__phase-caption">
+            <span class="demo__phase-num">2</span>
+            <div>
+              <p class="demo__phase-title">タップで答え合わせ、そして判定</p>
+              <p class="demo__phase-body">スペルと例文が一度に出てきます。発音も聞けます。<em>覚えた</em>か<em>まだ</em>かは自分で判定。覚えていない単語ほど、早めにもう一度出てきます。</p>
+            </div>
+          </figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -444,30 +366,10 @@
   <section class="section levels" id="levels">
     <div class="container">
       <div class="section-header">
-        <p class="section-eyebrow">レベル</p>
         <h2 class="display-lg">今のレベルから、少しずつ。</h2>
         <p class="section-header__sub">
-          Lv.1〜Lv.10、各レベル800語ずつ。最初のリリースでは Lv.1〜3 まで使えます。
+          リリース時は Lv.1〜3（約2,400語）。以降のレベルは準備でき次第、順次追加していきます。
         </p>
-      </div>
-
-      <div class="levels__grid">
-        <div class="level-cell level-cell--free"><div class="level-cell__num">1</div><div class="level-cell__label">無料</div></div>
-        <div class="level-cell level-cell--unlocked"><div class="level-cell__num">2</div><div class="level-cell__label">MVP</div></div>
-        <div class="level-cell level-cell--unlocked"><div class="level-cell__num">3</div><div class="level-cell__label">MVP</div></div>
-        <div class="level-cell level-cell--coming"><div class="level-cell__num">4</div><div class="level-cell__label">Coming</div></div>
-        <div class="level-cell level-cell--coming"><div class="level-cell__num">5</div><div class="level-cell__label">Coming</div></div>
-        <div class="level-cell level-cell--coming"><div class="level-cell__num">6</div><div class="level-cell__label">Coming</div></div>
-        <div class="level-cell level-cell--coming"><div class="level-cell__num">7</div><div class="level-cell__label">Coming</div></div>
-        <div class="level-cell level-cell--coming"><div class="level-cell__num">8</div><div class="level-cell__label">Coming</div></div>
-        <div class="level-cell level-cell--coming"><div class="level-cell__num">9</div><div class="level-cell__label">Coming</div></div>
-        <div class="level-cell level-cell--coming"><div class="level-cell__num">10</div><div class="level-cell__label">Coming</div></div>
-      </div>
-
-      <div class="levels__legend">
-        <div class="legend-item"><div class="legend-swatch" style="background:var(--surface-cream-strong)"></div> Lv.1 は無料</div>
-        <div class="legend-item"><div class="legend-swatch" style="background:var(--primary);border-color:var(--primary)"></div> サブスクで利用可能</div>
-        <div class="legend-item"><div class="legend-swatch" style="background:var(--canvas);border-style:dashed"></div> 今後追加</div>
       </div>
 
       <div class="levels__progress">
@@ -501,7 +403,6 @@
   <section class="section privacy">
     <div class="container">
       <div class="section-header">
-        <p class="section-eyebrow">姿勢</p>
         <h2 class="display-lg">個人情報は集めません。<br>広告も出しません。</h2>
         <p class="privacy__lead">
           続けやすさは、機能だけで決まるものではないと考えています。学習に関係ないものは、できるだけ画面に置かないようにしました。
@@ -557,7 +458,6 @@
   <section class="section faq" id="faq">
     <div class="container">
       <div class="section-header">
-        <p class="section-eyebrow">よくある質問</p>
         <h2 class="display-lg">気になりやすいことを、先に。</h2>
       </div>
       <div class="faq__list">
@@ -632,7 +532,7 @@
       <div class="final-cta__card">
         <h2 class="final-cta__title">画像と一緒に、単語を。</h2>
         <p class="final-cta__sub">
-          今日の通勤からでも、1日数分から始められます。Lv.1 は無料です。
+          今日の通勤からでも、1日数分から始められます。
         </p>
         <!-- TODO(app-store-url): Replace href with actual App Store URL after approval. -->
         <a class="btn btn--lg btn--on-dark" href="#" data-app-store-link>

@@ -111,16 +111,15 @@
               <path d="M5 12h14M13 6l6 6-6 6"/>
             </svg>
           </a>
-          <a class="btn btn--secondary btn--lg" href="#how">See how it works</a>
         </div>
-        <p class="hero__cta-note">Lv.1 is free. No sign-in. Open and go.</p>
+        <p class="hero__cta-note">No sign-in. Open and go.</p>
       </div>
       <div class="hero__phone-wrap">
         <div class="hero__dots dot-pattern hero__dots--tr"></div>
         <div class="hero__dots dot-pattern hero__dots--bl"></div>
         <div class="phone phone--lg">
           <div class="phone__screen">
-            <img src="assets/app-card-spill.png" alt="pictan flashcard screen" width="360" height="660">
+            <img src="assets/demo-reveal-en.png" alt="pictan flashcard for the word “spill,” showing the image, definition, example, and Got it / Not yet buttons.">
           </div>
         </div>
       </div>
@@ -131,7 +130,6 @@
   <section class="section pain">
     <div class="container">
       <div class="section-header">
-        <p class="section-eyebrow">Sound familiar?</p>
         <h2 class="display-lg">Why does English vocabulary keep feeling like a chore?</h2>
         <p class="section-header__sub">
           When studying English isn't sticking, it's usually one of these.
@@ -157,7 +155,7 @@
               <path d="M8 12l2 2 4-4"/>
             </svg>
           </div>
-          <div class="pain-card__title">You stop opening Duolingo after three weeks.</div>
+          <div class="pain-card__title">You stop opening the app after three weeks.</div>
           <div class="pain-card__body">Only the notifications keep piling up.</div>
         </div>
 
@@ -190,7 +188,6 @@
   <section class="section" id="why">
     <div class="container">
       <div class="section-header">
-        <p class="section-eyebrow">Why it doesn't stick</p>
         <h2 class="display-lg">It's not your fault.<br>Most methods are designed for the wrong setting.</h2>
         <p class="section-header__sub struct__intro">
           Three structural reasons English vocabulary tends to fall apart. pictan is built around fixing them.
@@ -224,7 +221,6 @@
   <section class="section pillars" id="how">
     <div class="container">
       <div class="section-header">
-        <p class="section-eyebrow">How pictan works</p>
         <h2 class="display-lg">Three pillars holding each other up.</h2>
         <p class="section-header__sub">
           pictan is built on three things: images, recall practice, and English-only definitions. They each help, but it's the combination that makes them stick.
@@ -299,7 +295,7 @@
       <div class="pillars__synergy">
         <div>
           <h3 class="synergy__title">
-            Not a picture vocab book. Not Anki. Not an English-only dictionary.
+            Not a picture vocab book. Not a flashcard drill app. Not an English-only dictionary.
           </h3>
           <p class="synergy__lead">
             Images let you grasp meaning even when the English definition is hard.<br>
@@ -335,126 +331,52 @@
     </div>
   </section>
 
-  <!-- ============ Demo (interactive flashcard) ============ -->
+  <!-- ============ Demo (side-by-side flow) ============ -->
   <section class="section demo">
     <div class="container">
       <div class="section-header">
-        <p class="section-eyebrow">How it works</p>
         <h2 class="display-lg">What happens on a single card.</h2>
         <p class="section-header__sub">
-          Tap the card below to see how it moves. Five to fifteen minutes a day fits a commute or a break.
+          Try to recall first, then tap to check. Five to fifteen minutes a day fits a commute or a break.
         </p>
       </div>
 
-      <div class="demo__grid">
-        <div class="demo__copy">
-          <div class="demo__steps">
-            <div class="demo-step demo-step--active" data-demo-step="0">
-              <div class="demo-step__num">1</div>
-              <div>
-                <p class="demo-step__title">First, try to recall.</p>
-                <p class="demo-step__body">Only the image and the English definition show. The spelling stays hidden, so you have time to think before checking.</p>
-              </div>
-            </div>
-            <div class="demo-step" data-demo-step="1">
-              <div class="demo-step__num">2</div>
-              <div>
-                <p class="demo-step__title">Tap to reveal.</p>
-                <p class="demo-step__body">Spelling and example appear together. Audio plays for pronunciation.</p>
-              </div>
-            </div>
-            <div class="demo-step" data-demo-step="2">
-              <div class="demo-step__num">3</div>
-              <div>
-                <p class="demo-step__title">Pick: got it / not yet.</p>
-                <p class="demo-step__body">You judge yourself. Words you missed come back sooner.</p>
-              </div>
-            </div>
-          </div>
-          <button class="btn btn--secondary" data-demo-reset style="margin-top:20px">Start over</button>
-        </div>
-
-        <div class="demo__phone-wrap">
-          <div class="phone phone--sm" style="aspect-ratio: 260 / 540">
+      <div class="demo__pair">
+        <figure class="demo__phase">
+          <div class="phone phone--sm">
             <div class="phone__screen">
-              <div class="demo-card" data-demo-card data-phase="0">
-                <div class="demo-card__statusbar">
-                  <span>9:03</span>
-                  <span style="display:flex;gap:4px;align-items:center">
-                    <span style="display:inline-block;width:14px;height:6px;background:#141413;border-radius:2px"></span>
-                    <span style="display:inline-block;width:6px;height:10px;background:#141413;border-radius:1px"></span>
-                  </span>
-                </div>
-                <div class="demo-card__topbar">
-                  <div class="demo-card__close" aria-hidden="true">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M6 6l12 12M18 6L6 18"/>
-                    </svg>
-                  </div>
-                  <div class="demo-card__counter">12 / 20</div>
-                  <div style="width:24px"></div>
-                </div>
-                <div class="demo-card__progress">
-                  <div class="demo-card__progress-fill" style="width:60%"></div>
-                </div>
-
-                <div class="demo-card__image" role="button" tabindex="0" aria-label="Reveal the answer">
-                  <div class="demo-card__sound" aria-hidden="true">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M11 5L6 9H3v6h3l5 4V5z"/>
-                      <path d="M16 8a5 5 0 010 8M19 5a9 9 0 010 14"/>
-                    </svg>
-                  </div>
-                  <svg viewBox="0 0 200 160" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0" aria-hidden="true">
-                    <defs>
-                      <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
-                        <stop offset="0" stop-color="#5b4636"/>
-                        <stop offset="1" stop-color="#1f1611"/>
-                      </linearGradient>
-                    </defs>
-                    <rect width="200" height="160" fill="url(#bg)"/>
-                    <ellipse cx="100" cy="125" rx="60" ry="10" fill="#3d2a1d" opacity="0.7"/>
-                    <g transform="translate(80 60) rotate(-25)">
-                      <rect width="40" height="34" rx="3" fill="#ece4d8"/>
-                      <path d="M40 8 q14 4 14 13 q0 9 -14 13" fill="none" stroke="#ece4d8" stroke-width="4"/>
-                    </g>
-                    <path d="M110 85 q-2 18 -6 28 q-4 8 -10 12" stroke="#5b3a20" stroke-width="5" fill="none" stroke-linecap="round"/>
-                    <ellipse cx="92" cy="128" rx="22" ry="6" fill="#5b3a20"/>
-                    <ellipse cx="92" cy="127" rx="14" ry="3" fill="#7c4f2c"/>
-                  </svg>
-                  <div class="demo-card__image-tag">spill</div>
-                </div>
-
-                <div class="demo-card__meta">VERB</div>
-                <div class="demo-card__def">To let water or food fall out by mistake.</div>
-
-                <div class="demo-card__example-wrap">
-                  <div class="demo-card__example-label">EXAMPLE</div>
-                  <div class="demo-card__example">Please do not spill your drink on the book.</div>
-                </div>
-
-                <div class="demo-card__reveal-hint demo-card__bottom demo-card__bottom--guess">Tap to reveal</div>
-
-                <div class="demo-card__actions demo-card__bottom demo-card__bottom--reveal">
-                  <button class="demo-card__btn demo-card__btn--not" type="button">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M19 12H5M11 6l-6 6 6 6"/>
-                    </svg>
-                    Not yet
-                  </button>
-                  <button class="demo-card__btn demo-card__btn--got" type="button">
-                    Got it
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M5 12h14M13 6l6 6-6 6"/>
-                    </svg>
-                  </button>
-                </div>
-
-                <div class="demo-card__reveal-hint demo-card__bottom demo-card__bottom--result">Saved. On to the next card.</div>
-              </div>
+              <img src="assets/demo-guess-en.png" alt="Card with only the image and definition visible — the spelling stays hidden so you can recall it first.">
             </div>
           </div>
+          <figcaption class="demo__phase-caption">
+            <span class="demo__phase-num">1</span>
+            <div>
+              <p class="demo__phase-title">First, try to recall.</p>
+              <p class="demo__phase-body">Only the image and the English definition show. The spelling stays hidden, so you have time to think before checking.</p>
+            </div>
+          </figcaption>
+        </figure>
+
+        <div class="demo__arrow" aria-hidden="true">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M13 6l6 6-6 6"/>
+          </svg>
         </div>
+
+        <figure class="demo__phase">
+          <div class="phone phone--sm">
+            <div class="phone__screen">
+              <img src="assets/demo-reveal-en.png" alt="After tapping: the spelling and example appear, and Got it / Not yet buttons appear at the bottom.">
+            </div>
+          </div>
+          <figcaption class="demo__phase-caption">
+            <span class="demo__phase-num">2</span>
+            <div>
+              <p class="demo__phase-title">Tap to reveal, then judge yourself.</p>
+              <p class="demo__phase-body">Spelling and example appear together, and audio plays for pronunciation. Pick <em>Got it</em> or <em>Not yet</em>—words you missed come back sooner.</p>
+            </div>
+          </figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -463,30 +385,10 @@
   <section class="section levels" id="levels">
     <div class="container">
       <div class="section-header">
-        <p class="section-eyebrow">Levels</p>
         <h2 class="display-lg">Start where you are, step by step.</h2>
         <p class="section-header__sub">
-          Ten levels, 800 words each. The first release ships with Lv.1–3.
+          Launching with Lv.1–3 (about 2,400 words). More levels will be added as they're ready.
         </p>
-      </div>
-
-      <div class="levels__grid">
-        <div class="level-cell level-cell--free"><div class="level-cell__num">1</div><div class="level-cell__label">Free</div></div>
-        <div class="level-cell level-cell--unlocked"><div class="level-cell__num">2</div><div class="level-cell__label">MVP</div></div>
-        <div class="level-cell level-cell--unlocked"><div class="level-cell__num">3</div><div class="level-cell__label">MVP</div></div>
-        <div class="level-cell level-cell--coming"><div class="level-cell__num">4</div><div class="level-cell__label">Coming</div></div>
-        <div class="level-cell level-cell--coming"><div class="level-cell__num">5</div><div class="level-cell__label">Coming</div></div>
-        <div class="level-cell level-cell--coming"><div class="level-cell__num">6</div><div class="level-cell__label">Coming</div></div>
-        <div class="level-cell level-cell--coming"><div class="level-cell__num">7</div><div class="level-cell__label">Coming</div></div>
-        <div class="level-cell level-cell--coming"><div class="level-cell__num">8</div><div class="level-cell__label">Coming</div></div>
-        <div class="level-cell level-cell--coming"><div class="level-cell__num">9</div><div class="level-cell__label">Coming</div></div>
-        <div class="level-cell level-cell--coming"><div class="level-cell__num">10</div><div class="level-cell__label">Coming</div></div>
-      </div>
-
-      <div class="levels__legend">
-        <div class="legend-item"><div class="legend-swatch" style="background:var(--surface-cream-strong)"></div> Lv.1 is free</div>
-        <div class="legend-item"><div class="legend-swatch" style="background:var(--primary);border-color:var(--primary)"></div> Available with subscription</div>
-        <div class="legend-item"><div class="legend-swatch" style="background:var(--canvas);border-style:dashed"></div> Coming later</div>
       </div>
 
       <div class="levels__progress">
@@ -520,7 +422,6 @@
   <section class="section privacy">
     <div class="container">
       <div class="section-header">
-        <p class="section-eyebrow">Where we stand</p>
         <h2 class="display-lg">No personal data.<br>No ads.</h2>
         <p class="privacy__lead">
           Keeping up with study isn't only about features. Anything not about learning, we keep off the screen.
@@ -576,7 +477,6 @@
   <section class="section faq" id="faq">
     <div class="container">
       <div class="section-header">
-        <p class="section-eyebrow">Frequently asked</p>
         <h2 class="display-lg">Things people ask first.</h2>
       </div>
       <div class="faq__list">
@@ -651,7 +551,7 @@
       <div class="final-cta__card">
         <h2 class="final-cta__title">Words, paired with pictures.</h2>
         <p class="final-cta__sub">
-          Start with today's commute. A few minutes a day is enough. Lv.1 is free.
+          Start with today's commute. A few minutes a day is enough.
         </p>
         <!-- TODO(app-store-url): Replace href with actual App Store URL after approval. -->
         <a class="btn btn--lg btn--on-dark" href="#" data-app-store-link>
