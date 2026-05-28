@@ -1,26 +1,37 @@
 # corita-web
 
-Static site for corita and its apps. Hosted on Vercel.
+Static sites for corita and its apps. Hosted on Vercel as **two separate projects** sharing this single repository.
 
 ## Structure
 
 ```
-/                       → corita.jp (landing)
-/pictan                 → /pictan/index.html (English landing)
-/pictan/ja              → /pictan/ja.html (Japanese landing)
-/pictan/privacy         → English privacy policy
-/pictan/privacy-ja      → Japanese privacy policy
-/pictan/terms           → English terms
-/pictan/terms-ja        → Japanese terms
-/pictan/support         → English support
-/pictan/support-ja      → Japanese support
+/                       → corita.jp (corita studio landing)
+                        → Vercel project: corita-web (Root Directory: ./)
+
+pictan/                 → pictan.corita.jp (Pictan app site)
+                        → Vercel project: pictan-web (Root Directory: pictan/)
+  index.html              English LP (with first-visit ja auto-redirect)
+  ja.html                 Japanese LP
+  privacy[.html|-ja.html] Privacy policy (en / ja)
+  terms[.html|-ja.html]   Terms of service (en / ja)
+  support[.html|-ja.html] Support page (en / ja)
+  app.js                  Demo phase machine, FAQ accordion, lang preference
+  styles.css              Anthropic-derived design tokens
+  assets/                 Screenshots, OG images
+  vercel.json             cleanUrls + trailingSlash for the subproject
 ```
 
-`vercel.json` enables clean URLs (no `.html` extension in the address bar).
+Each project's `vercel.json` enables clean URLs (no `.html` extension in the address bar).
 
 ## Deploy
 
-1. Push to GitHub.
-2. Import the repo in Vercel.
-3. Add `corita.jp` and `www.corita.jp` as production domains.
-4. Update DNS at the registrar to point to Vercel.
+The two Vercel projects auto-deploy from `main`:
+
+- **corita-web**: Root Directory `./` — serves `corita.jp`
+- **pictan-web**: Root Directory `pictan/` — serves `pictan.corita.jp`
+
+DNS: `corita.jp` and `pictan` CNAME both point to Vercel via dnsv.jp.
+
+## History
+
+The old `/pictan/*` path scheme under `corita.jp` was retired on 2026-05-28 in favor of the `pictan.corita.jp` subdomain. The previous static site (English-only `/pictan/index.html` with policy/terms/support pages) lived at `web/pictan/` and was removed in the same cleanup. The new `pictan/` directory holds the scratch-built LP previously kept under `pictan-next/`. See `MIGRATION.md` for the original migration plan record.

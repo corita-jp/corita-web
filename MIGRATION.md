@@ -1,8 +1,24 @@
 # Migration: pictan → pictan.corita.jp サブドメイン化
 
-> **状態**: 待機中（App Store 審査通過後に実行）
+> **状態**: ✅ **完了**（2026-05-28）
 > **作成日**: 2026-05
 > **目的**: pictan 関連ページを `corita.jp/pictan/*` から `pictan.corita.jp/*` に移行し、ブランド分離とアナリティクス独立性を確保する。
+>
+> ---
+>
+> ## 完了サマリ（2026-05-28 時点）
+>
+> - ✅ `pictan.corita.jp` サブドメイン公開（Vercel `pictan-web` プロジェクト、Root Directory: `pictan/`）
+> - ✅ 英語 / 日本語 LP をスクラッチ実装（`navigator.language` ベース自動振り分け、hreflang triplet）
+> - ✅ Privacy / Terms / Support の `pictan-` 系内部リンクを新 URL スキームに書き換え
+> - ✅ App Store Connect / RevenueCat 上の Privacy / Terms / Support URL を `pictan.corita.jp/*` に切替（v1.0 再申請時）
+> - ✅ App Store 審査通過 → v1.0 公開（2026-05-28）
+> - ✅ 旧 `web/pictan/` (静的英語サイト) 削除 + `pictan-next/` → `pictan/` リネーム
+> - ✅ `corita.jp/index.html` の `/pictan` リンクを `https://pictan.corita.jp/` に張り替え
+>
+> 旧 `corita.jp/pictan/*` への 301 リダイレクトは設定しなかった（外部参照ゼロを確認済みのため）。以降の本文は当時の計画ドキュメントとして履歴保存。
+>
+> ---
 
 ---
 
