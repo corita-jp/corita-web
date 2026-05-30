@@ -2,6 +2,14 @@
 
 Static sites for corita studio and its apps. Hosted on Vercel as **two separate projects** sharing this single repository.
 
+## 🟢 Cross-session state (read this first)
+
+pictan は Engineering / Marketing の **2 セッション並行運用**。横断的な状態の正本は **app リポの `STATE.md`** (`/Users/tatsuya/Corita/pictan/code/app/STATE.md`) にある。
+
+Web 側の作業 (favicon 追加、HTML 修正、PostHog 仕込み、Vercel 設定変更等) でも、他セッションに影響する変更が発生したら **app リポの `STATE.md` に append** すること。本リポ単体での STATE は持たない (single source of truth)。
+
+セッション役割と file ownership の詳細は app リポの `CLAUDE.md` 上部にあるセッション起動チェックリストを参照。
+
 > **Repository name note**: this repo was previously named `corita-web` on GitHub. It was renamed to `pictan-web` on 2026-05-30 (the pictan site is the primary content; the corita.jp landing is a minimal stub). Old clone URLs at `github.com/corita-jp/corita-web` still redirect, but please use `github.com/corita-jp/pictan-web` going forward. Local clones should `git remote set-url origin https://github.com/corita-jp/pictan-web.git`.
 
 ## Structure
