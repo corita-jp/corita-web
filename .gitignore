@@ -1,1 +1,10 @@
 .DS_Store
+
+# Node tooling — this repo is intentionally a static site. If someone runs
+# `npm i` here by mistake the artifacts must never reach the remote or
+# Vercel (Vercel would otherwise try to treat this as a Node project).
+node_modules/
+package.json
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
