@@ -43,9 +43,19 @@ DNS: `corita.jp` and `pictan` CNAME both point to Vercel via dnsv.jp.
 
 This repository is intentionally a **static site** (HTML / CSS / inline JS only). Do **not** run `npm i` here — there is no Node project. `package.json`, `package-lock.json`, `yarn.lock`, `pnpm-lock.yaml`, and `node_modules/` are all `.gitignore`d at the root so they cannot accidentally be committed. If they ever reach the remote, Vercel will try to treat the site as a Node project and the build can fail in subtle ways.
 
-## Analytics (planned)
+## Analytics
 
-Web analytics are **not yet instrumented**. PostHog Web (`posthog-js`) is the planned solution to unify with the mobile app's `posthog-react-native`. An attempt to add `@vercel/analytics` on 2026-05-30 was rolled back before any commit because PostHog will cover web traffic too. See the app repo's task tracker (#29) for the planned integration scope.
+`pictan.corita.jp` is instrumented with **PostHog Web** (CDN snippet, no build step). All 8 HTML pages under `pictan/` include the init snippet in `<head>` and share the same PostHog project as the mobile app (key `phc_rWcrSJkdc...`), so LP → install funnels can be analyzed end-to-end. Each event is tagged with `source: 'web'` to keep web/app traffic filterable in the dashboard.
+
+Tracked events today:
+- Page views (automatic, `capture_pageview: true`)
+- `cta_app_store_clicked` — every App Store CTA tap
+
+Privacy: `localStorage` only (no cookies), no IP capture, no PII. PostHog usage is disclosed in `pictan/privacy.html` and `pictan/privacy-ja.html` along with the cross-border (US) data processing note.
+
+`corita.jp` (root `index.html`) is **intentionally not instrumented** — it's a single-page studio landing with low traffic and no funnel role.
+
+An attempt to add `@vercel/analytics` on 2026-05-30 was rolled back before any commit; PostHog covers web too.
 
 ## History
 
