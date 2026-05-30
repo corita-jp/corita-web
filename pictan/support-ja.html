@@ -31,6 +31,31 @@
   .contact { background: #f7f7f7; border-radius: 12px; padding: 24px; margin: 24px 0; }
   footer { color: #999; font-size: 13px; margin-top: 64px; border-top: 1px solid #eee; padding-top: 24px; }
 </style>
+
+  <!-- PostHog Web Analytics -->
+  <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys getNextSurveyStep onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_rWcrSJkdcYnk5cGF9qBrARbBvBnhsoNQjpHH9aCFtLf6', {
+      api_host: 'https://us.i.posthog.com',
+      person_profiles: 'identified_only',
+      capture_pageview: true,
+      capture_pageleave: true
+    });
+    // CTA クリック追跡 (App Store ボタン) — 広告→LP→App Storeクリック ファネル用
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('[data-app-store-link]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          if (typeof posthog !== 'undefined') {
+            posthog.capture('cta_app_store_clicked', {
+              location: window.location.pathname,
+              href: el.href || el.getAttribute('href'),
+              language: document.documentElement.lang || 'unknown'
+            });
+          }
+        });
+      });
+    });
+  </script>
 </head>
 <body>
 <div class="wrap">
